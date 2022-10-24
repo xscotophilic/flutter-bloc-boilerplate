@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../constants/theme.dart';
 import '../initializer/initializer.dart';
+import 'theme_bloc/theme_bloc.dart';
 // import '../l10n/l10n.dart';
 
 class App extends StatelessWidget {
@@ -17,10 +20,15 @@ class AppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'App title',
-      debugShowCheckedModeBanner: false,
-      home: Initializer(),
+    return BlocBuilder<ThemeBloc, ThemeState>(
+      builder: (context, state) {
+        return MaterialApp(
+          title: 'App title',
+          debugShowCheckedModeBanner: false,
+          theme: state.isLightThemeMode ? AppTheme.light : AppTheme.dark,
+          home: const Initializer(),
+        );
+      },
     );
   }
 }
