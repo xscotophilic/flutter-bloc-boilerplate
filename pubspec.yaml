@@ -15,7 +15,13 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   animations: ^2.0.7
+  # Date and Time
   intl: ^0.17.0
+  # Console Log
+  colorize: ^3.0.0
+  # Local APIs
+  universal_file:
+    path: packages/universal_file
 
 dev_dependencies:
   flutter_test:
