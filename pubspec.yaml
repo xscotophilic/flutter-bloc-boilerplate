@@ -19,8 +19,6 @@ dependencies:
   intl: ^0.17.0
   # Console Log
   colorize: ^3.0.0
-  #State management
-  flutter_bloc: ^8.1.1
   # Local APIs
   universal_file:
     path: packages/universal_file
