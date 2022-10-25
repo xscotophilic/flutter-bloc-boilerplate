@@ -11,7 +11,7 @@ import 'presentation/app/theme_bloc/theme_bloc.dart';
 
 Future<void> bootstrap() async {
   FlutterError.onError = (details) {
-    Log.danger(details.exceptionAsString(), details.stack);
+    Log.danger(details.exceptionAsString(), data: details.stack);
   };
 
   Bloc.observer = AppBlocObserver();
@@ -34,6 +34,6 @@ Future<void> bootstrap() async {
         child: const App(),
       ),
     ),
-    (error, stackTrace) => Log.danger(error.toString(), stackTrace),
+    (error, stackTrace) => Log.danger(error.toString(), data: stackTrace),
   );
 }
