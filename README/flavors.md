@@ -1,5 +1,7 @@
 - Add below config in `android` section of `android/app/build.gradle`
 ```gradle
+flavorDimensions "app"
+
 productFlavors {
     development {
         dimension "app"
