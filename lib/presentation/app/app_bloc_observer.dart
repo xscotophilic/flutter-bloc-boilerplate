@@ -1,6 +1,4 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:template/config/app_config.dart';
-
 import '../../_internal/log/log.dart';
 
 class AppBlocObserver extends BlocObserver {

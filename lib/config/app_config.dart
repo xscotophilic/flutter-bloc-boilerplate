@@ -1,10 +1,10 @@
-import '../constants/enums/envtype.dart';
+import 'config.dart';
 
-// set Env type
-const EnvType env = EnvType.local;
+class AppConfig {
+  static late final Config _config;
+  static Config get config => _config;
 
-bool enableConsoleLog = true;
-bool enableLocalLog = true;
-
-const String appTitle = '';
-const String appTitleShort = '';
+  AppConfig(Config configArg) {
+    _config = configArg;
+  }
+}
