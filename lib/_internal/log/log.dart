@@ -3,8 +3,8 @@ import 'console_log.dart';
 import 'local_log.dart';
 
 class Log {
-  static final bool _writeConsoleLog = enableConsoleLog;
-  static final bool _writeLocalLog = enableLocalLog;
+  static final bool _writeConsoleLog = AppConfig.config.enableConsoleLog;
+  static final bool _writeLocalLog = AppConfig.config.enableLocalLog;
 
   static void log(
     String text, {

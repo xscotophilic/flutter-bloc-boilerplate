@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../config/app_config.dart';
 import '../../constants/theme.dart';
 import '../initializer/initializer.dart';
 import 'theme_bloc/theme_bloc.dart';
@@ -23,7 +24,7 @@ class AppView extends StatelessWidget {
     return BlocBuilder<ThemeBloc, ThemeState>(
       builder: (context, state) {
         return MaterialApp(
-          title: 'App title',
+          title: AppConfig.config.appTitle,
           debugShowCheckedModeBanner: false,
           theme: state.isLightThemeMode ? AppTheme.light : AppTheme.dark,
           home: const Initializer(),
