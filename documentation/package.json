@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "vitepress": "^1.0.0-alpha.27",
+    "vue": "^3.2.41"
+  },
+  "name": "flutter-bloc-boilerplate-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xscotophilic/flutter-bloc-boilerplate.git"
+  },
+  "keywords": [
+    "flutter",
+    "boilerplate",
+    "template",
+    "modification",
+    "easy",
+    "pre",
+    "defined",
+    "bloc",
+    "apis"
+  ],
+  "author": "xscotophilic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xscotophilic/flutter-bloc-boilerplate/issues"
+  },
+  "homepage": "https://github.com/xscotophilic/flutter-bloc-boilerplate#readme",
+  "description": ""
+}
