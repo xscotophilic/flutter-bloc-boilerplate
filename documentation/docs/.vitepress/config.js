@@ -6,7 +6,7 @@ export default {
     lastUpdated: true,
     markdown: {
         theme: 'material-palenight',
-        lineNumbers: true
+        lineNumbers: false
     },
     themeConfig: {
         siteTitle: 'Flutter Bloc Boilerplate', // in Nav
