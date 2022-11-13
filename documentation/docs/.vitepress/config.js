@@ -6,7 +6,7 @@ export default {
     lastUpdated: true,
     markdown: {
         theme: 'material-palenight',
-        lineNumbers: true
+        lineNumbers: false
     },
     themeConfig: {
         siteTitle: 'Flutter Bloc Boilerplate', // in Nav
@@ -25,7 +25,23 @@ export default {
                 collapsible: true,
                 items: [
                     { text: 'Introduction', link: '/project/introduction' },
-                    { text: 'Getting Started', link: '/project/getting-started' },
+                    {
+                        text: 'Getting Started',
+                        items: [
+                            { text: 'Overview', link: '/project/getting-started/overview' },
+                            { text: 'Using Boilerplate In New Project', link: '/project/getting-started/boilerplate-as-new' },
+                            { text: 'Extending Boilerplate', link: '/project/getting-started/boilerplate-as-base' },
+                        ],
+                    },
+                ]
+            },
+            {
+                text: 'Basic configs',
+                collapsible: true,
+                items: [
+                    { text: 'Setup Flavors', link: '/project/basic-config/flavors' },
+                    { text: 'Default Package Names', link: '/project/basic-config/packagenames' },
+
                 ]
             }
         ],
