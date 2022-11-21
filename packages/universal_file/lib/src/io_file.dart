@@ -1,9 +1,7 @@
 import 'dart:io';
 
 import 'package:path/path.dart' as p;
-import 'package:path_provider/path_provider.dart';
-
-import './universal_file.dart';
+import 'package:universal_file/universal_file.dart';
 
 class IoFileWriter implements UniversalFile {
   late Directory dataPath;
@@ -19,9 +17,12 @@ class IoFileWriter implements UniversalFile {
   Future getDataPath() async {
     if (_hasDataPath) return;
     _hasDataPath = true;
+    // if running tests then uncomment the following line
+    // String supportDir = './test/fixtures/core';
+    // if running tests then comment the following line
     String supportDir = (await getApplicationSupportDirectory()).path;
     dataPath = Directory(supportDir);
-    createDirIfNotExists(dataPath);
+    await createDirIfNotExists(dataPath);
   }
 
   @override
@@ -39,7 +40,7 @@ class IoFileWriter implements UniversalFile {
     );
   }
 
-  static void createDirIfNotExists(Directory dir) async {
+  static Future<void> createDirIfNotExists(Directory dir) async {
     //Create directory if it doesn't exist
     if (!await dir.exists()) {
       //Catch error since disk io can always fail.
