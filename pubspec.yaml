@@ -22,7 +22,12 @@ dependencies:
   # State management
   equatable: ^2.0.5
   flutter_bloc: ^8.1.1
+  # Localizations
+  flutter_localizations:
+    sdk: flutter
   # Local APIs
+  locale_api:
+    path: packages/locale_api
   theme_api:
     path: packages/theme_api
   universal_file:
@@ -36,3 +41,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true

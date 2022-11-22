@@ -1,0 +1,10 @@
+{
+    "enLanguageName": "अंग्रेज़ी",
+    "@enLanguageName": {
+      "description": "English language name"
+    },
+    "hiLanguageName": "हिन्दी",
+    "@hiLanguageName": {
+      "description": "Hindi language name"
+    }
+}

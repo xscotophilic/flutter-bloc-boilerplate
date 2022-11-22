@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
+import '../../bloc/bloc/locale_bloc/locale_bloc.dart';
+import '../../bloc/bloc/theme_bloc/theme_bloc.dart';
 import '../../config/app_config.dart';
 import '../../constants/theme.dart';
+import '../../l10n/l10n.dart';
 import '../initializer/initializer.dart';
-import 'theme_bloc/theme_bloc.dart';
-// import '../l10n/l10n.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -21,15 +24,25 @@ class AppView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ThemeBloc, ThemeState>(
-      builder: (context, state) {
-        return MaterialApp(
+    return BlocBuilder<LocaleBloc, LocaleState>(
+      builder: (context, localeState) => BlocBuilder<ThemeBloc, ThemeState>(
+        builder: (context, themeState) => MaterialApp(
           title: AppConfig.config.appTitle,
           debugShowCheckedModeBanner: false,
-          theme: state.isLightThemeMode ? AppTheme.light : AppTheme.dark,
+          localizationsDelegates: const [
+            AppLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: L10n.all,
+          locale: L10n.all.contains(localeState.locale)
+              ? localeState.locale
+              : L10n.all.first,
+          theme: themeState.isLightThemeMode ? AppTheme.light : AppTheme.dark,
           home: const Initializer(),
-        );
-      },
+        ),
+      ),
     );
   }
 }
