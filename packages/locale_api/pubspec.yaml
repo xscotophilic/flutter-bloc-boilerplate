@@ -1,0 +1,23 @@
+name: locale_api
+description: Locale API to manage app locale.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.2"
+  flutter: ">=3.3.4"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.0.15
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  test: ^1.21.4
+  mockito: ^5.3.2
+
+flutter:
+  uses-material-design: true
