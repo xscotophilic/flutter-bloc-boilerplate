@@ -2,7 +2,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import './universal_file.dart';
 
-class WebFileWriter implements UniversalFile {
+class WebFile implements UniversalFile {
   late SharedPreferences prefs;
   bool _hasPrefs = false;
 
@@ -11,7 +11,7 @@ class WebFileWriter implements UniversalFile {
 
   String? _lastWrite;
 
-  WebFileWriter(this.fileName);
+  WebFile(this.fileName);
 
   Future<void> initPrefs() async {
     if (_hasPrefs) {
@@ -46,4 +46,4 @@ class WebFileWriter implements UniversalFile {
   }
 }
 
-UniversalFile getPlatformFileWriter(String fileName) => WebFileWriter(fileName);
+UniversalFile getPlatformFileWriter(String fileName) => WebFile(fileName);

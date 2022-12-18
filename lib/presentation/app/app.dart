@@ -5,8 +5,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../../bloc/bloc/locale_bloc/locale_bloc.dart';
 import '../../bloc/bloc/theme_bloc/theme_bloc.dart';
-import '../../config/app_config.dart';
-import '../../constants/theme.dart';
+import '../../_internal/config/app_config.dart';
+import '../../_internal/theme/theme.dart';
 import '../../l10n/l10n.dart';
 import '../initializer/initializer.dart';
 

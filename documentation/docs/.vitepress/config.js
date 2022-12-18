@@ -43,6 +43,17 @@ export default {
                     { text: 'Default Package Names', link: '/project/basic-config/packagenames' },
 
                 ]
+            },
+            {
+                text: 'Modules',
+                collapsible: true,
+                items: [
+                    { text: 'Universal file management', link: '/project/modules/universalfile' },
+                    { text: 'Log Modules', link: '/project/modules/logging' },
+                    { text: 'Environments', link: '/project/modules/envs' },
+                    { text: 'Theme', link: '/project/modules/theme' },
+                    { text: 'Locale', link: '/project/modules/locale' },
+                ]
             }
         ],
         footer: {
