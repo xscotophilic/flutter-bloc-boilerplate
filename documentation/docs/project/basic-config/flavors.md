@@ -6,6 +6,8 @@
 Flavors Documentation here is only for Android and iOS, if you wish to extend it, feel free to do so.
 :::
 
+Check [Environment and App Config](../modules/envs.md) also.
+
 ## Android
 - Add below config in `android` section of `android/app/build.gradle`
 ```groovy

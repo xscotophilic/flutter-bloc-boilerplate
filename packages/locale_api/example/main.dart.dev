@@ -1,0 +1,34 @@
+// Wrap the app with MultiBlocProvider and add the LocaleBloc to the providers list.
+MultiBlocProvider(
+  providers: [
+    BlocProvider(
+      create: (context) => LocaleBloc(localeApi: localeApi)
+        ..add(
+          const InitLocaleEvent(),
+        ),
+    )
+  ],
+  child: const App(),
+),
+
+// Create  a LocaleApi instance and pass it to the LocaleBloc.
+final LocaleApi localeApi = LocaleApi(
+  plugin: await SharedPreferences.getInstance(),
+);
+
+// Listen to the LocaleBloc state and return the MaterialApp with the updated locale.
+return BlocBuilder<LocaleBloc, LocaleState>(
+  builder: (context, localeState) => MaterialApp(
+    localizationsDelegates: const [
+      AppLocalizations.delegate,
+      GlobalMaterialLocalizations.delegate,
+      GlobalWidgetsLocalizations.delegate,
+      GlobalCupertinoLocalizations.delegate,
+    ],
+    supportedLocales: L10n.all,
+    locale: L10n.all.contains(localeState.locale)
+        ? localeState.locale
+        : L10n.all.first,
+    home: const Initializer(),
+  ),
+);

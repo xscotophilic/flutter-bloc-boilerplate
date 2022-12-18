@@ -3,14 +3,14 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 import 'package:universal_file/universal_file.dart';
 
-class IoFileWriter implements UniversalFile {
+class IoFile implements UniversalFile {
   late Directory dataPath;
   bool _hasDataPath = false;
 
   @override
   String fileName;
 
-  IoFileWriter(this.fileName);
+  IoFile(this.fileName);
 
   String get fullPath => p.join(dataPath.path, fileName);
 
@@ -51,4 +51,4 @@ class IoFileWriter implements UniversalFile {
   }
 }
 
-UniversalFile getPlatformFileWriter(String string) => IoFileWriter(string);
+UniversalFile getPlatformFileWriter(String string) => IoFile(string);

@@ -1,4 +1,4 @@
-import '../../config/app_config.dart';
+import '../config/app_config.dart';
 import 'console_log.dart';
 import 'local_log.dart';
 
