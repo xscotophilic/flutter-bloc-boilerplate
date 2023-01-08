@@ -1,8 +1,8 @@
 # Security Policy
 
-We take the security of our software products and services seriously, including all of the open source code repositories managed through our organizations.
+We take the security of our software products and services seriously, including all of the open-source code repositories managed through our organizations.
 
-Even though open source repositories are outside of the scope of our bug bounty program and therefore not eligible for bounty rewards, we will ensure that your finding gets passed along to the appropriate maintainers for remediation.
+Even though open-source repositories are outside of the scope of our bug bounty program and therefore not eligible for bounty rewards, we will ensure that your finding gets passed along to the appropriate maintainers for remediation.
 
 ## Supported Versions
 
@@ -14,7 +14,7 @@ Even though open source repositories are outside of the scope of our bug bounty 
 
 ## Reporting a Vulnerability
 
-If you believe you have found a security vulnerability in any of our repository, please report it to us through coordinated disclosure.
+If you believe you have found a security vulnerability in any of our repositories, please report it to us through coordinated disclosure.
 
 
 

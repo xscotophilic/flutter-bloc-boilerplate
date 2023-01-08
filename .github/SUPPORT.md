@@ -14,7 +14,7 @@ next to their day job; you are not entitled to free customer service.
 ## Contents
 
 *   [Questions](#questions)
-    *   [Asking quality questions](#asking-quality-questions)
+*   [Asking quality questions](#asking-quality-questions)
 *   [Contributions](#contributions)
 
 ## Questions
@@ -33,13 +33,12 @@ close to a problem.
 Then, those trying to help you out have to spend a lot of time asking additional
 questions to understand what you are hoping to achieve.
 
-Spending the extra time up front can help save everyone time in the long run.
+Spending the extra time upfront can help save everyone time in the long run.
 
 *   Try to define what you need help with:
-    *   Is there something in particular you want to do?
-    *   What problem are you encountering and what steps have you taken to try
-        and fix it?
-    *   Is there a concept you’re not understanding?
+*   Is there something, in particular, you want to do?
+*   What problem are you encountering and what steps have you taken to try and fix it?
+*   Is there a concept you’re not understanding?
 *   Avoid falling for the [XY problem][xy]
 *   Search on GitHub to see if a similar question has been asked
 *   If possible, provide sample code, or a video
